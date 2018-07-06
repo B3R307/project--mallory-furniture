@@ -4,7 +4,9 @@ class ProductId extends Component {
     render(){
       return(
         <div className="product-id">
-          <h2>Product Id</h2>
+          <img src={this.props.imgUrl}/>
+          <h3>{this.props.name}</h3>
+          <p>{this.props.price}</p>
         </div>
     );
   }

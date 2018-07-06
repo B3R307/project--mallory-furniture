@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import NanImg from '../images/mf-logo-white.svg'
 
+
+
 class Nav extends Component {
   render(){
     return(
@@ -20,9 +22,10 @@ class Nav extends Component {
           <Link to="/category/bedroom">Bedroom</Link>
           <Link to="/category/miscellaneous">Misc</Link>
           <span className="navbar-vertical-div"/>
-          <Link to="#"> <i class="ion-ios-cart-outline"></i> </Link>
+          <Link to="#"> <i className="ion-ios-cart-outline"></i> </Link>
         </div>
      </div>
+
     );
   }
 }

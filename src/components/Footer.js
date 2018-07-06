@@ -22,9 +22,9 @@ class Footer extends Component {
 
           <div className="social-footer">
              <h3>Social</h3>
-              <Link to="#"> <i class="ion-social-instagram-outline"></i> </Link>
-              <Link to="#"> <i class="ion-social-twitter-outline"></i> </Link>
-              <Link to="#"> <i class="ion-social-pinterest-outline"></i> </Link>
+              <Link to="#"> <i className="ion-social-instagram-outline"></i> </Link>
+              <Link to="#"> <i className="ion-social-twitter-outline"></i> </Link>
+              <Link to="#"> <i className="ion-social-pinterest-outline"></i> </Link>
           </div>
         </div>
     );
