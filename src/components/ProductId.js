@@ -5,8 +5,10 @@ class ProductId extends Component {
       return(
         <div className="product-id">
           <img src={this.props.imgUrl}/>
-          <h3>{this.props.name}</h3>
-          <p>{this.props.price}</p>
+            <div className="product-text">
+              <h3>{this.props.name}</h3>
+              <p>${this.props.price}</p>
+            </div>
         </div>
     );
   }

@@ -11,6 +11,7 @@ import About from './components/About.js'
 import Terms from './components/Terms.js'
 import AllProducts from './components/AllProducts.js'
 import ProductId from './components/ProductId.js'
+import HeaderSplash from './components/HeaderSplash.js'
 
 
 
@@ -21,10 +22,8 @@ class App extends Component {
       <div id="app-container">
         <Navbar/>
 
-        {        }
             <Switch>
                 <Route exact path="/category/:categoryType" component={AllProducts}/>
-
                 <Route exact path="/product/:productId" component={ProductId}/>
                 <Route exact path="/all-products" component={AllProducts}/>
                 <Route exact path="/terms" component={Terms}/>
@@ -32,7 +31,6 @@ class App extends Component {
                 <Route exact path="/" component={HomePage}/>
             </Switch>
         <Footer/>
-        {  }
       </div>
     );
   }

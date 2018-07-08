@@ -11,23 +11,16 @@ class AllProducts extends Component {
     }
   }
 
-  componentWillMount(){
-    this._fetchFurnitureData(this.props)
-  }
-
-
 
   _fetchFurnitureData(componentProps){
     let apiReqUrl='https://mallory-furniture-admin.now.sh/api/v1/products'
-    let allProductsInRoute = componentProps.match.params.products
-    let seatingProductsInRoute = componentProps.match.params.seating
 
     if(typeof allProductsInRoute !== 'undefined'){
       apiReqUrl = `https://mallory-furniture-admin.now.sh/api/v1/all-products`
     }
 
-    if(typeof seatingProductsInRoute !== 'undefined'){
-      apiReqUrl = `https://mallory-furniture-admin.now.sh/api/v1/products?category=storage`
+    if(typeof featuredProductsInRoute !== 'undefined'){
+      apiReqUrl = `https://mallory-furniture-admin.now.sh/api/v1/products?category=featured`
     }
 
     console.log(apiReqUrl);
@@ -43,6 +36,15 @@ class AllProducts extends Component {
 
       })
    }
+
+    componentWillMount(){
+     this._fetchFurnitureData(this.props)
+    }
+
+    componentWillReceiveProps(newProps){
+    // this._fetchFurnitureData(newProps)
+    }
+
 
     _renderCards(fitmentDataList){
       let fornitureComponentList = this.state.fitmentDataList.map((cardObj, i)=>{
@@ -68,7 +70,7 @@ class AllProducts extends Component {
         <h3>in route: <code>{this.props.match.url}</code></h3>
 
         <div className="fornitureList">
-          {this._renderCards(this.state) }
+          {this._renderCards(this.state.fitmentDataList)}
         </div>
       </div>
     );

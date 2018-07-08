@@ -10,15 +10,20 @@ body {
   font-family: 'Source Sans Pro',sans-serif;
 }
 
+.el--hidden{
+  display: none;
+}
+
 .terms {
   font-family: 'Source Sans Pro',sans-serif;
-  margin: 150px;
-  padding: 50px;
+  margin: 70px;
+  padding: 20px;
 }
 
 .terms h1{
   font-family: 'Playfair Display' serif;
 }
+
 
 .navbar {
   font-family: 'Source Sans Pro', serif;
@@ -72,6 +77,60 @@ body {
   border-right: 1px solid #ffffff;
 }
 
+.img-landing {
+  padding: 10px;
+  background-image: url("./images/landing-splash-bg.png");
+  background-size: cover;
+  background-position: center center;
+  min-height: 30vh;
+}
+
+.all-products {
+  padding: 30px;
+}
+
+
+.fornitureList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.product-id {
+  width: 33%;
+  border-color: #999999;
+  border-style:solid;
+  border-width: thin;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.product-id img{
+  width: 100%;
+}
+
+.product-id h3{
+  font-size: 17px;
+  width: 100%;
+}
+
+.product-id p{
+  color: #999999;
+  font-weight: bold;
+}
+
+.home-pages{
+  padding: 15px;
+}
+
+.home-pages p{
+  color: #999999;
+  font-weight: bold;
+}
+
 .footer{
   font-family: 'Source Sans Pro',sans-serif;
   font-size: 15px;
@@ -87,7 +146,6 @@ body {
   padding: 320px;
   padding-top:30px;
   padding-bottom:30px;
-
 }
 
 .footer h3{
@@ -102,7 +160,6 @@ body {
   margin-left: 0;
   padding:5px;
   text-decoration: none;
-
 }
 
 .categories-footer a{
@@ -123,4 +180,16 @@ body {
   padding: 5px;
   font-size: 20px;
   color: #000000;
+}
+
+.container-cat-btn-links{
+
+}
+
+.btn-cat-link{
+  border: dodgerblue 1px solid;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: dodgerblue;
+  margin: 12px;
 }
