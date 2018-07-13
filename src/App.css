@@ -20,8 +20,9 @@ body {
   padding: 20px;
 }
 
-.terms h1{
-  font-family: 'Playfair Display' serif;
+.terms h3{
+  text-align: left;
+  color:#000000;
 }
 
 
@@ -82,13 +83,42 @@ body {
   background-image: url("./images/landing-splash-bg.png");
   background-size: cover;
   background-position: center center;
-  min-height: 30vh;
+  min-height: 45vh;
+}
+
+.home-pages{
+  padding: 15px;
+}
+
+.home-pages h1,h3 {
+  text-align:center;
+  color: #ecf0f1;
+}
+
+.home-pages h1{
+  padding-top: 55px;
+  font-family: 'Source Sans Pro', serif;
+}
+
+.home-page-text h2{
+  color: #000000;
+  text-align: left;
+  font-family: 'Playfair Display' serif;
+}
+
+.home-page-text p{
+  color: #999999;
+  font-weight: bold;
+  text-align: left;
 }
 
 .all-products {
   padding: 30px;
 }
 
+.all-products h3{
+  text-align: left;
+}
 
 .fornitureList {
   display: flex;
@@ -115,6 +145,8 @@ body {
 .product-id h3{
   font-size: 17px;
   width: 100%;
+  color: #000000;
+  text-align: left;
 }
 
 .product-id p{
@@ -122,13 +154,8 @@ body {
   font-weight: bold;
 }
 
-.home-pages{
-  padding: 15px;
-}
-
-.home-pages p{
+.browser-categories h4{
   color: #999999;
-  font-weight: bold;
 }
 
 .footer{
@@ -183,13 +210,21 @@ body {
 }
 
 .container-cat-btn-links{
-
+  display: flex;
+  justify-content: center;
 }
 
 .btn-cat-link{
+  display: flex;
+  flex-wrap: wrap;
+  width: 20%;
   border: dodgerblue 1px solid;
   padding: 8px 16px;
   text-decoration: none;
   color: dodgerblue;
   margin: 12px;
+  justify-content: center;
+  max-width: 150px;
+
+
 }

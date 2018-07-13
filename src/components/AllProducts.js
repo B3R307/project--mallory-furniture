@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import request from 'superagent'
 import ProductId from './ProductId.js'
+import {categoryNameLinks} from '../constants/categoryLinks.js'
+
 
 class AllProducts extends Component {
   constructor(args){
@@ -14,21 +16,20 @@ class AllProducts extends Component {
 
   _fetchFurnitureData(componentProps){
     let apiReqUrl='https://mallory-furniture-admin.now.sh/api/v1/products'
+    let catInRoute = componentProps.match.params.categoryType
 
-    if(typeof allProductsInRoute !== 'undefined'){
-      apiReqUrl = `https://mallory-furniture-admin.now.sh/api/v1/all-products`
+    console.log(catInRoute);
+
+    if(typeof catInRoute !== 'undefined'){
+      apiReqUrl ='https://mallory-furniture-admin.now.sh/api/v1/products?category=${catInRoute}'
     }
 
-    if(typeof featuredProductsInRoute !== 'undefined'){
-      apiReqUrl = `https://mallory-furniture-admin.now.sh/api/v1/products?category=featured`
-    }
 
-    console.log(apiReqUrl);
     request
       .get(apiReqUrl)
       .then((serverRes)=>{
         const serverResJson = serverRes.body
-        console.log(serverResJson)
+        // console.log(serverResJson)
 
         this.setState({
           fitmentDataList : serverResJson
@@ -42,7 +43,7 @@ class AllProducts extends Component {
     }
 
     componentWillReceiveProps(newProps){
-    // this._fetchFurnitureData(newProps)
+     this._fetchFurnitureData(newProps)
     }
 
 
@@ -53,6 +54,7 @@ class AllProducts extends Component {
           imgUrl={cardObj.imageLink}
           name={cardObj.item}
           price={cardObj.price}
+          furnitureId={cardObj._id}
           key={i}
           />
       })
@@ -66,8 +68,6 @@ class AllProducts extends Component {
       <div className="all-products">
         <h2>All Products</h2>
         <h4>All available listings</h4>
-
-        <h3>in route: <code>{this.props.match.url}</code></h3>
 
         <div className="fornitureList">
           {this._renderCards(this.state.fitmentDataList)}

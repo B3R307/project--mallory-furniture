@@ -5,11 +5,7 @@ import LandImg from '../images/landing-splash-bg.png'
 import {categoryNameLinks} from "../constants/categoryLinks.js"
 
 class Nav extends Component {
-  _generateCategoryLinks(catLinksList){
-    return catLinksList.map( categoryNameObj => {
-      return <Link to={categoryNameObj.urlName}>{categoryNameObj.fullName}</Link>
-    })
-  }
+
 
   render(){
     return(
@@ -21,7 +17,12 @@ class Nav extends Component {
         </div>
         <div className="dinamic-navbar">
           <span className="navbar-vertical-div"/>
-          {this._generateCategoryLinks(categoryNameLinks)}
+            <Link to='/all-products'>All</Link>
+            <Link to='/category/seating'>Seating</Link>
+            <Link to='/category/bedroom'>Bedroom</Link>
+            <Link to='/category/tables'>Tables</Link>
+            <Link to='/category/storages'>Storage</Link>
+            <Link to='/category/desks'>Desks</Link>
           <span className="navbar-vertical-div"/>
           <Link to="#"> <i className="ion-ios-cart-outline"></i> </Link>
         </div>

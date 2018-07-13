@@ -5,15 +5,12 @@ import './App.css'
 
 import Navbar from './components/Navbar.js'
 import Footer from './components/Footer.js'
-
 import HomePage from './components/HomePage.js'
 import About from './components/About.js'
 import Terms from './components/Terms.js'
 import AllProducts from './components/AllProducts.js'
 import ProductId from './components/ProductId.js'
 import HeaderSplash from './components/HeaderSplash.js'
-
-
 
 
 class App extends Component {

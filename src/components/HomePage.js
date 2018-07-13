@@ -81,15 +81,23 @@ class HomePages extends Component {
     return (
       <div className="home-pages">
           <HeaderSplash fromPage="homepage">
-            <h1>Mallory furniture COOL</h1>
+            <h1>Mallory Furniture</h1>
+            <h3>Your furniture is old. <br/> Ours is older.</h3>
           </HeaderSplash>
 
+       <div className="home-page-text">
           <h2>Featured Products</h2>
           <p>Check out some of our favorite listings</p>
-
+      </div>
 
           <div className="fornitureList">
                 {this._renderFeaturedCards(this.state.furnitureList) }
+          </div>
+
+
+          <div className="browser-categories">
+              <h2>Browse  by Categories</h2>
+              <h4>Explore by furniture type.</h4>
           </div>
 
           <div className="container-cat-btn-links">
