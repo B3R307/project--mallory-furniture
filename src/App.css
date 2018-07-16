@@ -25,7 +25,6 @@ body {
   color:#000000;
 }
 
-
 .navbar {
   font-family: 'Source Sans Pro', serif;
   font-size: 20px;
@@ -120,7 +119,11 @@ body {
   text-align: left;
 }
 
-.fornitureList {
+.all-products h4{
+  color:#999999;
+}
+
+.furnitureList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -157,6 +160,108 @@ body {
 .browser-categories h4{
   color: #999999;
 }
+
+.furniture-display{
+  text-align: right;
+  font-family: 'Playfair Display' serif;
+  font-weight: bold;
+
+}
+
+.all-items {
+  color: #F44336;
+  border-color: #F44336;
+  margin: 20px;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.on-sale {
+   color: #999999;
+   border-color: #999999;
+   padding: 15px;
+   text-decoration: none;
+   border-width: thick;
+}
+
+.furniture-count p{
+  color: #999999;
+  text-align: right;
+  font-weight: bold;
+}
+
+.item-count{
+  color: #FFC107;
+  margin-right: 8px;
+}
+
+.text-info h3{
+  text-align: left;
+  color: #000000;
+}
+
+.product-container{
+  display:flex;
+  flex-wrap: wrap;
+  border-color: #999999;
+  border: 5px 5px 5px 5px;
+}
+
+.img{
+  display: flex;
+  width: 70%;
+  margin-right: -70px;
+  margin-bottom: 5px;
+}
+
+.info-container{
+  width: 30%;
+  text-align: right;
+  font-weight: bold;
+}
+
+.product-info{
+  display: flex;
+  flex-wrap: wrap;
+  text-align:left;
+}
+
+.condition,
+.measurements,
+button{
+  width: 33%;
+}
+
+.condition,
+.measurements{
+  color: #999999;
+  font-size: 18px;
+}
+
+.condition p{
+  text-transform: capitalize;
+}
+
+.measurements p{
+  display: inline-flex;
+  align-content: space-around;
+  padding: 3px;
+}
+
+.measurements h4{
+  margin-bottom: 5px;
+}
+
+.product-container button{
+  background: #F44336;
+  color: #f9f7f7;
+  width: 115px;
+  height: 35px;
+  margin-top: 30px;
+  margin-left: 14px;
+  border-radius: 50px;
+}
+
 
 .footer{
   font-family: 'Source Sans Pro',sans-serif;

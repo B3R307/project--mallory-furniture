@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import request from 'superagent'
-import ProductId from './ProductId.js'
+import ProductCard from './ProductCard.js'
+import {Link} from 'react-router-dom'
 import {categoryNameLinks} from '../constants/categoryLinks.js'
 
 
@@ -15,13 +16,13 @@ class AllProducts extends Component {
 
 
   _fetchFurnitureData(componentProps){
-    let apiReqUrl='https://mallory-furniture-admin.now.sh/api/v1/products'
+    let apiReqUrl=`https://mallory-furniture-admin.now.sh/api/v1/products`
     let catInRoute = componentProps.match.params.categoryType
 
-    console.log(catInRoute);
+    // console.log(catInRoute);
 
     if(typeof catInRoute !== 'undefined'){
-      apiReqUrl ='https://mallory-furniture-admin.now.sh/api/v1/products?category=${catInRoute}'
+      apiReqUrl =`https://mallory-furniture-admin.now.sh/api/v1/products?category=${catInRoute}`
     }
 
 
@@ -48,28 +49,54 @@ class AllProducts extends Component {
 
 
     _renderCards(fitmentDataList){
-      let fornitureComponentList = this.state.fitmentDataList.map((cardObj, i)=>{
-        // console.log(fornitureObj)
-        return <ProductId
+      let furnitureComponentList = this.state.fitmentDataList.map((cardObj, i)=>{
+        console.log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr")
+
+        return (<ProductCard
           imgUrl={cardObj.imageLink}
           name={cardObj.item}
           price={cardObj.price}
           furnitureId={cardObj._id}
           key={i}
-          />
+          />)
       })
 
-      return fornitureComponentList
+
+      return furnitureComponentList
     }
 
   render(){
 
+    let titleProduct ='All Products'
+    let lowTitleProduct ='All Products'
+
+    let catInRoute = this.props.match.params.categoryType
+
+      if(typeof catInRoute !=='undefined'){
+        titleProduct = `${catInRoute[0].toUpperCase()}${catInRoute.slice(1)}`
+      }
+      if(typeof catInRoute !== 'undefined'){
+        lowTitleProduct = `${catInRoute}`
+      } else if(typeof catInRoute !== '/all-products'){
+        lowTitleProduct ='All available listings'
+      }
+
     return (
       <div className="all-products">
-        <h2>All Products</h2>
-        <h4>All available listings</h4>
+        <div className="dinamyc-title">
+          <h2>{titleProduct}</h2>
+          <h4> {lowTitleProduct}</h4>
+        </div>
 
-        <div className="fornitureList">
+        <div className="furniture-display">
+          <p><Link className="all-items" to="/all-products">All Items</Link>
+          <Link className="on-sale" to="/all-products">On Sale</Link></p>
+        </div>
+          <div className="furniture-count">
+            <p><span className="item-count">{this.state.fitmentDataList.length}</span> Items showing</p>
+          </div>
+
+        <div className="furnitureList">
           {this._renderCards(this.state.fitmentDataList)}
         </div>
       </div>

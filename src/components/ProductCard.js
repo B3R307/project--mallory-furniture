@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom"
-import request from 'superagent'
 
 
-class ProductId extends Component {
+
+
+class ProductCard extends Component {
+
       render(){
+
       return(
         <div className="product-id">
           <Link to={`/product/${this.props.furnitureId}`}>
@@ -19,4 +22,4 @@ class ProductId extends Component {
   }
 }
 
-export default ProductId
+export default ProductCard

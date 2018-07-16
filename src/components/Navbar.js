@@ -21,7 +21,7 @@ class Nav extends Component {
             <Link to='/category/seating'>Seating</Link>
             <Link to='/category/bedroom'>Bedroom</Link>
             <Link to='/category/tables'>Tables</Link>
-            <Link to='/category/storages'>Storage</Link>
+            <Link to='/category/storage'>Storage</Link>
             <Link to='/category/desks'>Desks</Link>
           <span className="navbar-vertical-div"/>
           <Link to="#"> <i className="ion-ios-cart-outline"></i> </Link>

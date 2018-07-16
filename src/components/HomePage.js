@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import request from 'superagent'
-import ProductId from './ProductId.js'
+import ProductCard from './ProductCard.js'
 import {categoryNameLinks} from "../constants/categoryLinks.js"
 import {Link} from 'react-router-dom'
 import HeaderSplash from "./HeaderSplash.js"
@@ -63,10 +63,11 @@ class HomePages extends Component {
       })
 
        let featuredComponentList = filterFeaturedProductList.map((cardObj, i)=>{
-         return <ProductId
+         return <ProductCard
             imgUrl={cardObj.imageLink}
             name={cardObj.item}
             price={cardObj.price}
+            furnitureId={cardObj._id}
             key={i}
             />
        })
@@ -90,7 +91,7 @@ class HomePages extends Component {
           <p>Check out some of our favorite listings</p>
       </div>
 
-          <div className="fornitureList">
+          <div className="furnitureList">
                 {this._renderFeaturedCards(this.state.furnitureList) }
           </div>
 

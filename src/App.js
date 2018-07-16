@@ -9,8 +9,9 @@ import HomePage from './components/HomePage.js'
 import About from './components/About.js'
 import Terms from './components/Terms.js'
 import AllProducts from './components/AllProducts.js'
-import ProductId from './components/ProductId.js'
+import ProductCard from './components/ProductCard.js'
 import HeaderSplash from './components/HeaderSplash.js'
+import ProductSingle from './components/ProductSingle.js'
 
 
 class App extends Component {
@@ -21,7 +22,7 @@ class App extends Component {
 
             <Switch>
                 <Route exact path="/category/:categoryType" component={AllProducts}/>
-                <Route exact path="/product/:productId" component={ProductId}/>
+                <Route exact path="/product/:productId" component={ProductSingle}/>
                 <Route exact path="/all-products" component={AllProducts}/>
                 <Route exact path="/terms" component={Terms}/>
                 <Route exact path="/about" component={About}/>
