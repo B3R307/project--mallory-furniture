@@ -16,6 +16,8 @@ import ProductSingle from './components/ProductSingle.js'
 
 class App extends Component {
   render() {
+    console.log("=================");
+    console.log(this.props);
     return (
       <div id="app-container">
         <Navbar/>

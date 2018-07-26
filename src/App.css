@@ -85,6 +85,54 @@ body {
   min-height: 45vh;
 }
 
+.img-bedroom{
+  padding: 10px;
+  background-image: url("./images/category-bedroom.png");
+  background-size: cover;
+  background-position: center center;
+  min-height: 45vh;
+}
+
+.img-desks{
+  padding: 10px;
+  background-image: url("./images/category-desks.png");
+  background-size: cover;
+  background-position: center center;
+  min-height: 45vh;
+}
+
+.img-miscellaneous{
+  padding: 10px;
+  background-image: url("./images/category-miscellaneous.png");
+  background-size: cover;
+  background-position: center center;
+  min-height: 45vh;
+}
+
+.img-seating{
+  padding: 10px;
+  background-image: url("./images/category-seating.png");
+  background-size: cover;
+  background-position: center center;
+  min-height: 45vh;
+}
+
+.img-storage{
+  padding: 10px;
+  background-image: url("./images/category-storage.png");
+  background-size: cover;
+  background-position: center center;
+  min-height: 45vh;
+}
+
+.img-tables{
+  padding: 10px;
+  background-image: url("./images/category-tables.png");
+  background-size: cover;
+  background-position: center center;
+  min-height: 45vh;
+}
+
 .home-pages{
   padding: 15px;
 }
@@ -165,16 +213,26 @@ body {
   text-align: right;
   font-family: 'Playfair Display' serif;
   font-weight: bold;
-
 }
 
-.all-items {
+.btn-for-filter{
   color: #F44336;
+  width: 100px;
+  padding: 10px;
   border-color: #F44336;
-  margin: 20px;
-  padding: 15px;
-  text-decoration: none;
+  border-width: thin;
+  border-style: solid;
 }
+
+.btn-for-filter--selected{
+  color: #999999;
+  margin: 10px;
+  padding: 10px;
+  border-color: #999999;
+  border-width: thin;
+  border-style: solid;
+}
+
 
 .on-sale {
    color: #999999;
@@ -231,6 +289,8 @@ body {
 button{
   width: 33%;
 }
+
+
 
 .condition,
 .measurements{
