@@ -2,6 +2,7 @@
   "name": "project--mallory-furniture",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://B3R307.github.io/project--mallory-furniture",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
